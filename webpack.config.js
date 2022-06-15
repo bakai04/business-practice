@@ -7,7 +7,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 const PAGES_DIR = `${path.resolve(__dirname, "src")}/pug/pages/`;
-const PAGES = fs.readdirSync(PAGES_DIR).filter((fileName) => fileName.endsWith(".pug"));
+const PAGES = fs
+  .readdirSync(PAGES_DIR)
+  .filter((fileName) => fileName.endsWith(".pug"));
 
 module.exports = {
   mode: "development",
@@ -33,7 +35,12 @@ module.exports = {
       directory: path.join(__dirname, "dist"),
     },
     watchFiles: {
-      paths: ["./src/html/index.pug"],
+      paths: [
+        "./src/pug/index.pug",
+        "./src/pug/pages/main.pug",
+        "./src/pug/pages/services.pug",
+        "./src/pug/pages/training.pug",
+      ],
       options: {
         usePolling: true,
       },
