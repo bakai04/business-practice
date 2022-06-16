@@ -8,7 +8,7 @@ function modulePage() {
   const textarea = document.querySelector(".big-text");
   const emailInput = document.querySelector(".email");
 
-  sendFormDataBtn.addEventListener("click", () => {
+  sendFormDataBtn?.addEventListener("click", () => {
     let inputNameValue = checkInput(nameInput);
     let inputEmailValue = checkInput(emailInput);
     let inputTextArea=checkInput(textarea);

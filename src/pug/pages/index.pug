@@ -3,7 +3,8 @@ extends ../sample.pug
 block content
     section#cube
         .container
-            .cube__inner.d-flex.justify-content-between
+            img.first-line(src="../../assets/img/bg-line.png")
+            .cube__inner
                 .cube__inform
                     h2.cube__title Создаем решения
                     h3.cube__subtitle Для роста бизнеса
@@ -40,26 +41,23 @@ block content
         .container
             .services__inner
                 h2.services__title услуги
-            .services__cards.d-flex
-                .col-4
-                    a.services__item-block(href="./services.html")
-                        .item-block__inform.col-8.plan
-                            img(src="../../assets/img/icons/plan.svg", alt="icon")
-                            p Разрабатываем маркетинг-план: дорожная карта достижения целей
-                .services__item.col-8 
-                    a.services__item-block.col-12.lamp(href="./services.html")
-                        .item-block__inform.col-8.d-flex.justify-content-between.align-items-center
-                            img(src="../../assets/img/icons/lamp.svg", alt="icon")
-                            p Повышаем эффективность продвижения: аудит существующей модели
-                    .d-flex.justify-content-between.col-12
-                        a.services__item-block.search(href="./services.html")
-                            .item-block__inform.col-8
-                                img(src="../../assets/img/icons/search.svg", alt="icon")
-                                p Находим скрытую прибыль: анализ модели ценообразования
-                        a.services__item-block.search(href="./services.html")
-                                .item-block__inform.col-8
-                                    img(src="../../assets/img/icons/startup.svg", alt="icon")
-                                    p Запускаем новый проект: start-up маркетинг
+            .services__cards
+                a.services__item.plan(href="./services.html")
+                    .services__inform.col-8
+                        img(src="../../assets/img/icons/plan.svg", alt="icon")
+                        p Разрабатываем маркетинг-план: дорожная карта достижения целей
+                a.services__item.lamp(href="./services.html")
+                    .services__inform.col-8
+                        img(src="../../assets/img/icons/lamp.svg", alt="icon")
+                        p Повышаем эффективность продвижения: аудит существующей модели
+                a.services__item.search(href="./services.html")
+                    .services__inform.col-8
+                        img(src="../../assets/img/icons/search.svg", alt="icon")
+                        p Находим скрытую прибыль: анализ модели ценообразования
+                a.services__item.rocket(href="./services.html")
+                    .services__inform.col-8
+                        img(src="../../assets/img/icons/startup.svg", alt="icon")
+                        p Запускаем новый проект: start-up маркетинг
    
     section.modal-page.d-none
         .modal-page__inner

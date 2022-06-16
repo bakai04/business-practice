@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 const PAGES_DIR = `${path.resolve(__dirname, "src")}/pug/pages/`;
 const PAGES = fs
@@ -18,26 +17,14 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
-  optimization: {
-    minimizer: [
-      new ImageMinimizerPlugin({
-        minimizer: {
-          implementation: ImageMinimizerPlugin.imageminMinify,
-          options: {
-            plugins: [["imagemin-pngquant", { optimizationLevel: 6 }]],
-          },
-        },
-      }),
-    ],
-  },
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
     },
     watchFiles: {
       paths: [
-        "./src/pug/index.pug",
-        "./src/pug/pages/main.pug",
+        "./src/pug/sample.pug",
+        "./src/pug/pages/index.pug",
         "./src/pug/pages/services.pug",
         "./src/pug/pages/training.pug",
       ],
