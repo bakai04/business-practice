@@ -30,8 +30,12 @@
     flex-direction: column;
     align-items: center;
     padding: 0px 70px 0px 70px;
-    div{
-        margin-bottom: 6px;
+
+    div {
+        height: 73px;
+    } 
+    .textArea-input{
+        height: 214px;
     }
 }
 
@@ -79,6 +83,7 @@
     border: 0px;
     outline: 1px solid #0278ED;
 }
+
 .error {
     border: 0px;
     outline: 1px solid #CF4747;
@@ -88,7 +93,8 @@
 .form__button-submit {
     width: 312px;
 }
-.form__button-submit:disabled{
+
+.form__button-submit:disabled {
     border: 1px solid #9FA7B0;
     background: #9FA7B0;
     width: 312px;
@@ -106,4 +112,16 @@
     color: #CF4747;
     margin-left: 11px;
     margin-bottom: 0px;
+}
+
+.successfully {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #30B01E;
+    margin-top: 37px;
+    width: 248px;
 }

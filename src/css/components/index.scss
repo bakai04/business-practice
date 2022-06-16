@@ -3,10 +3,10 @@
     background: url("../../assets/img/bg-line2.png");
     background-repeat: no-repeat;
     background-position: left calc(42% + 25px) bottom 0px;
-    background-size: 606px 202px;
+    background-size: 45.4vw auto;
 
     .cube__inner {
-        padding: 11px 0px 133px 0px;
+        padding: 11px 0px 160px 0px;
         background: url("../../assets/img/bg-line.png");
         background-repeat: no-repeat;
         background-position: left 42% top 0px;
@@ -40,7 +40,7 @@
 
             .cube__text {
                 width: 34vw;
-                margin-top: 25px;
+                margin-top: 23px;
                 margin-bottom: 32px;
                 font-family: 'Lato';
                 font-style: normal;
@@ -60,8 +60,9 @@
 
 .articles {
     .articles__card {
+        margin: 0 auto;
         .articles__item {
-            margin-top: 35px;
+            margin-top: 32px;
             margin-bottom: 41px;
             align-items: center;
 
@@ -111,57 +112,60 @@
         }
     }
 
-    .services__item {
-        height: 507px;
-        padding-left: 15px;
+    .services__cards {
+        margin-top: 46px;
+        .services__item {
+            height: 507px;
+            padding-left: 15px;
 
-        .search {
-            margin-top: 15px;
-            height: calc(507px - 179px);
-            width: calc((50% - 7.5px));
+            .search {
+                margin-top: 15px;
+                height: calc(507px - 179px);
+                width: calc((50% - 7.5px));
 
+                img {
+                    margin-bottom: 32px;
+                }
+            }
+
+            .lamp {
+                height: 164px;
+            }
+        }
+
+        .plan {
             img {
                 margin-bottom: 32px;
             }
         }
 
-        .lamp {
-            height: 164px;
-        }
-    }
+        .services__item-block {
+            display: flex;
+            align-items: center;
+            background-color: #6CA7EF;
+            text-align: center;
+            border-radius: 20px;
+            height: 100%;
+            transition: 0.2s;
 
-    .plan {
-        img {
-            margin-bottom: 32px;
-        }
-    }
+            .item-block__inform {
+                margin: 0 auto;
 
-    .services__item-block {
-        display: flex;
-        align-items: center;
-        background-color: #6CA7EF;
-        text-align: center;
-        border-radius: 20px;
-        height: 100%;
-        transition: 0.2s;
-
-        .item-block__inform {
-            margin: 0 auto;
-
-            p {
-                margin: 0px;
-                max-width: 495px;
-                font-family: 'Lato';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 22px;
-                color: #FFFFFF;
+                p {
+                    margin: 0px;
+                    max-width: 495px;
+                    font-family: 'Lato';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: #FFFFFF;
+                }
             }
-        }
 
-        &:hover {
-            background: #5391DC;
+            &:hover {
+                background: #5391DC;
+            }
         }
     }
 }
@@ -186,10 +190,12 @@
                     font-size: 28px;
                     line-height: 34px;
                 }
+
                 .cube__subtitle {
                     font-size: 18px;
                     line-height: 22px;
                 }
+
                 .cube__text {
                     width: 34vw;
                     margin-top: 5px;
@@ -209,10 +215,12 @@
                 .cube__title {
                     font-size: 28px;
                 }
+
                 .cube__subtitle {
                     font-size: 18px;
                     line-height: 22px;
                 }
+
                 .cube__text {
                     width: 34vw;
                     margin-top: 5px;
