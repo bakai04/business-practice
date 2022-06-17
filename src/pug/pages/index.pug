@@ -1,63 +1,29 @@
 extends ../sample.pug
+include ../mixins/indexMixins.pug
 
 block content
+    include ../data/indexData
     section#cube
-        .container
-            img.first-line(src="../../assets/img/bg-line.png")
+        .container-md
             .cube__inner
                 .cube__inform
                     h2.cube__title Создаем решения
                     h3.cube__subtitle Для роста бизнеса
                     p.cube__text На основе анализа данных с алгоритмами реализации
                     button#open-modal.prime__button Обсудить проблему
-                img.cube__img(src="../assets/img/cube.png", alt="cube")
+                img.col-5.cube__img(src="../assets/img/cube.png", alt="cube")
     .articles
-        .container
-            .articles__card.col-10.d-flex.justify-content-between.flex-wrap
-                .articles__item.col-4.d-flex
-                    .col-3
-                        img.article-logo(src="../../assets/img/icons/logo2.svg", alt="logo")
-                    .col-9
-                        a(href="#") 
-                        a(href="#").article-text Как найти точки роста и определить цели?   
-                .col-2
-                .articles__item.col-4.d-flex
-                    .col-3
-                        img.article-logo(src="../../assets/img/icons/logo2.svg", alt="logo")
-                    .col-9
-                        a(href="#").article-text Как избежать проблем на старте нового бизнеса?
-                .articles__item.col-4.d-flex
-                    .col-3
-                        img.article-logo(src="../../assets/img/icons/logo2.svg", alt="logo")
-                    .col-9
-                        a(href="#").article-text Как увеличить прибыль, управляя ценами?
-                .col-2
-                .articles__item.col-4.d-flex
-                    .col-3
-                        img.article-logo(src="../../assets/img/icons/logo2.svg", alt="logo")
-                    .col-9
-                        a(href="#").article-text Как не попасть в "черную дыру" затрат на продвижение?
+        .container-md
+            .articles__cards
+                each val in articles
+                    +article(val)
     section#services
-        .container
+        .container-md
             .services__inner
                 h2.services__title услуги
             .services__cards
-                a.services__item.plan(href="./services.html")
-                    .services__inform.col-8
-                        img(src="../../assets/img/icons/plan.svg", alt="icon")
-                        p Разрабатываем маркетинг-план: дорожная карта достижения целей
-                a.services__item.lamp(href="./services.html")
-                    .services__inform.col-8
-                        img(src="../../assets/img/icons/lamp.svg", alt="icon")
-                        p Повышаем эффективность продвижения: аудит существующей модели
-                a.services__item.search(href="./services.html")
-                    .services__inform.col-8
-                        img(src="../../assets/img/icons/search.svg", alt="icon")
-                        p Находим скрытую прибыль: анализ модели ценообразования
-                a.services__item.rocket(href="./services.html")
-                    .services__inform.col-8
-                        img(src="../../assets/img/icons/startup.svg", alt="icon")
-                        p Запускаем новый проект: start-up маркетинг
+                each val in services
+                    +service(val)
    
     section.modal-page.d-none
         .modal-page__inner
@@ -72,7 +38,7 @@ block content
                         input.email(type='email', placeholder='Email', name='email')
                         p.warning-email-error 
                     .textArea-input
-                        textarea.big-text(type='text', placeholder='Пожалуйста опишите вашу проблему', name='big-text')
-                        p.warning-big-text-error 
-                    input.prime__button.form__button-submit(type='submit' value="отправить")
+                        textarea.big-text(type='text', placeholder='Пожалуйста опишите вашу проблему', name='textarea')
+                        p.warning-textarea-error 
+                    input.prime__button.form__button-submit(type='submit' name="textarea" value="отправить")
                     p.successfully.d-none Ваша заявка успешно отправлена!

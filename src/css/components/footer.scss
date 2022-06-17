@@ -2,6 +2,11 @@
     padding: 23px 0px;
     margin-top: 99px;
     background: #3F4750;
+    .footer__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     p {
         font-family: 'Lato';
         font-style: normal;
@@ -14,8 +19,9 @@
     }
 
     .social-media {
-        width: 110px;
-        
+        display: flex;
+        justify-content: space-between;
+        width: 120px;
         a svg path{
             transition: 0.2s;
         }
@@ -32,6 +38,21 @@
 
         .whatsapp:hover path {
             fill: #47CF34;
+        }
+    }
+}
+@media(max-width: 576px){
+    .footer {
+        padding: 23px 0px;
+        margin-top: 99px;
+        background: #3F4750;
+        .footer__inner{
+            flex-direction: column-reverse;
+            align-items:center;
+            .social-media{
+                width: 152px;
+                margin-bottom: 24px;
+            }
         }
     }
 }

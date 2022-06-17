@@ -16,27 +16,6 @@ function resetForm() {
   textarea.value = "";
   emailInput.value = "";
 }
-
-export function checkInput(formInput) {
-  const warningError = document.querySelector(
-    `.warning-${formInput.name}-error`
-  );
-  let value = "";
-  if (formInput.value.length == 0) {
-    formInput.classList.add("error");
-    warningError.textContent = "this field is reqiured*";
-  } else {
-    if (formInput.value.length < 3) {
-      formInput.classList.add("error");
-      warningError.textContent = "should be more then 3 symbols";
-    } else {
-      formInput.classList.remove("error");
-      warningError.textContent = "";
-      value = formInput.value;
-    }
-  }
-  return value;
-}
 export function submittingFormData(
   inputNameValue,
   inputEmailValue,

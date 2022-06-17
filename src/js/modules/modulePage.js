@@ -1,7 +1,6 @@
-import {
-    checkInput,
-    submittingFormData
-  } from "./FormValidatingFunction";
+import { submittingFormData } from "./modalPageFunc.js";
+import { checkInput } from "./validatingFormFunc.js";
+
 function modulePage() {
   const sendFormDataBtn = document.querySelector(".form__button-submit");
   const nameInput = document.querySelector(".name");
@@ -11,11 +10,10 @@ function modulePage() {
   sendFormDataBtn?.addEventListener("click", () => {
     let inputNameValue = checkInput(nameInput);
     let inputEmailValue = checkInput(emailInput);
-    let inputTextArea=checkInput(textarea);
-
+    let inputTextArea = checkInput(textarea);
     textarea.addEventListener("input", () => {
-        checkInput(textarea);
-      });
+      checkInput(textarea);
+    });
 
     nameInput.addEventListener("input", () => {
       checkInput(nameInput);
@@ -25,15 +23,11 @@ function modulePage() {
       checkInput(emailInput);
     });
     if (
-      inputNameValue !== "" &&
-      inputEmailValue !== "" &&
-      inputTextArea !== ""
+      inputNameValue !== undefined &&
+      inputEmailValue !== undefined &&
+      inputTextArea !== undefined
     ) {
-      submittingFormData(
-        inputNameValue,
-        inputEmailValue,
-        inputTextArea
-      );
+      submittingFormData(inputNameValue, inputEmailValue, inputTextArea);
     }
   });
 }

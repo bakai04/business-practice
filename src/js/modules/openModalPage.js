@@ -1,6 +1,6 @@
 import {
     openForm,
-  } from "./FormValidatingFunction";
+  } from "./modalPageFunc";
 function openModalPage() {
     const openBtn=document.querySelector("#open-modal");
     const closeBtn=document.querySelector(".modal-page__close");

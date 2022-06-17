@@ -1,6 +1,6 @@
 .modal-page {
     position: fixed;
-    z-index: 6;
+    z-index: 1000;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.35);
@@ -103,7 +103,7 @@
 
 .warning-name-error,
 .warning-email-error,
-.warning-big-text-error {
+.warning-textarea-error {
     font-family: 'Lato italic';
     font-style: italic;
     font-weight: 400;
