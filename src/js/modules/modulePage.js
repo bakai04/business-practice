@@ -1,5 +1,5 @@
 import { submittingFormData } from "./modalPageFunc.js";
-import { checkInput } from "./validatingFormFunc.js";
+import { renderValidation } from "./validatingFormFunc.js";
 
 function modulePage() {
   const sendFormDataBtn = document.querySelector(".form__button-submit");
@@ -8,19 +8,20 @@ function modulePage() {
   const emailInput = document.querySelector(".email");
 
   sendFormDataBtn?.addEventListener("click", () => {
-    let inputNameValue = checkInput(nameInput);
-    let inputEmailValue = checkInput(emailInput);
-    let inputTextArea = checkInput(textarea);
+    let inputNameValue = renderValidation(nameInput);
+    let inputEmailValue = renderValidation(emailInput);
+    let inputTextArea = renderValidation(textarea);
+    
     textarea.addEventListener("input", () => {
-      checkInput(textarea);
+      renderValidation(textarea);
     });
 
     nameInput.addEventListener("input", () => {
-      checkInput(nameInput);
+      renderValidation(nameInput);
     });
 
     emailInput.addEventListener("input", () => {
-      checkInput(emailInput);
+      renderValidation(emailInput);
     });
     if (
       inputNameValue !== undefined &&

@@ -1,0 +1,73 @@
+#service-page {
+    margin-top: 66px;
+    margin-bottom: 53px;
+    background: url("../../assets/img/bg-poligons.png");
+    background-repeat: no-repeat;
+    background-position: right -200px top 0px;
+
+    .service-page__inner {
+        position: relative;
+        margin-top: -3px;
+        padding-top: 32px;
+
+        .bg-pol {
+            position: absolute;
+            left: -25px;
+            top: 0px;
+            z-index: -1;
+        }
+
+        .services-page__title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 54px;
+            margin-bottom: 33px;
+            color: #282C37;
+        }
+    }
+
+    .service__description {
+        margin-top: 70px;
+
+        .title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;
+            color: #282C37;
+            margin-bottom: 36px;
+        }
+
+        .description__text {
+            p {
+                margin-bottom: 22px;
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                margin-left: 18px;
+                color: #000000;
+            }
+        }
+
+        .service__stages {
+            .title {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                color: #000000;
+                margin-left: 18px;
+            }
+            .stages__item {
+                list-style-position: outside;
+                margin-left: 60px;
+            }
+        }
+    }
+}

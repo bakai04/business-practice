@@ -1,7 +1,6 @@
-export function openForm() {
+export function toggleForm() {
   document.querySelector(".modal-page").classList.toggle("d-none");
   document.querySelector("body").classList.toggle("overflow-hidden");
-  resetForm();
 }
 
 function resetForm() {
@@ -19,7 +18,7 @@ function resetForm() {
 export function submittingFormData(
   inputNameValue,
   inputEmailValue,
-  inputTextArea
+  inputTextArea = ""
 ) {
   const sendFormDataBtn = document.querySelector(".form__button-submit");
   const successfullyText = document.querySelector(".successfully");
@@ -34,7 +33,8 @@ export function submittingFormData(
     sendFormDataBtn.disabled = false;
     successfullyText.classList.remove("d-none");
     setTimeout(() => {
-      openForm();
+      toggleForm();
+      resetForm();
     }, 1000);
   }, 2000);
 }

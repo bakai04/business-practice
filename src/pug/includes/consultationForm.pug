@@ -1,0 +1,13 @@
+.col-12.consultation
+    img.small(src="../../assets/img/Polygon 2.png", alt="icon")
+    img.midlle(src="../../assets/img/Polygon 2.png", alt="icon")
+    img.big(src="../../assets/img/Polygon 2.png", alt="icon")
+    form#consultation-form(onsubmit='return false;')
+        div
+            input.name(type='text', placeholder='Ваше имя', name='name')
+            p.warning-name-error 
+        div
+            input.email(type='email', placeholder='Email', name='email')
+            p.warning-email-error 
+        button.prime__button.consulting-form__btn Получить консультацию
+        p.successfully.d-none Ваша заявка успешно отправлена!

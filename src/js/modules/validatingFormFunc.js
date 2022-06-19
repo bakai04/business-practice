@@ -51,22 +51,16 @@ const inputValidatingFunctions = {
   ],
 };
 
-export function checkInput(formInput) {
+export function renderValidation(formInput) {
   const warningErrorText = document.querySelector(
     `.warning-${formInput.name}-error`
   );
-  const nameOfInput = formInput.name;
-  const typeOfValidating = inputValidatingFunctions[nameOfInput];
 
-  for (let i = 0; i <= typeOfValidating.length - 1; i++) {
-    let result = typeOfValidating[i](formInput.value);
-    warningErrorText.textContent = result;
-    if (result) {
-      break;
-    }else{
-      if(i===typeOfValidating.length - 1){
-        return formInput.value;
-      }
-    }
-  }
+  let errorText = "";
+  inputValidatingFunctions[formInput.name].forEach((getErrorText) => {
+    if (errorText) return;
+    errorText = getErrorText(formInput.value);
+  });
+  warningErrorText.textContent = errorText;
+  if (!errorText) return formInput.value;
 }

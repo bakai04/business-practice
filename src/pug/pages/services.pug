@@ -1,5 +1,27 @@
 extends ../sample.pug
+include ../mixins/plan.pug
+include ../mixins/stages.pug
 
 block content
-    .container-lg
-        p Услуги
+    include ../data/servicesData
+    section#service-page
+        .service-page__bg  
+        .container-md
+            include ../includes/breadCrumbs
+            .service-page__inner
+                img.bg-pol(src="../../assets/img/Polygon 2.png", alt="")
+                h2.services-page__title.col-12 Разрабатываем маркетинг-план: дорожная карта достижения целей
+                each val in servicePlan
+                    +plan(val)
+            .service__description
+                h2.title.col-12 Описание услуги
+                .description__text 
+                    each val in description 
+                        p #{val}
+                .service__stages 
+                    .title Основные этапы разработки маркетинг- 
+                        a(href="#")  маркетинг плана:
+                    ul.stages__item
+                        each val in serviceStage
+                            +stage(val)
+            include ../includes/consultationForm

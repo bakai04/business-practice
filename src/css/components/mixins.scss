@@ -1,0 +1,44 @@
+.plan {
+    margin-top: 12px;
+
+    img {
+        width: 23px;
+        height: auto;
+        margin: 0 41px 0 42px;
+    }
+
+    P {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 20px;
+        color: #282C37;
+    }
+}
+
+.bread-crumbs {
+    margin-bottom: 11px;
+}
+
+.stage {
+    margin-bottom: 17px;
+    li {
+        list-style: square url(../../assets/img/icons/Ellipse.svg);
+        padding-left: 15px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 20px;
+        color: #282C37;
+        // &::before{
+        //     content: "";
+        //     position: absolute;
+        //     border-radius: 50%;
+        //     width: 11px;
+        //     height: 11px;
+        //     background-color: #A5CBF9;            
+        // }
+    }
+}
