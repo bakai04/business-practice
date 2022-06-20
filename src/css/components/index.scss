@@ -4,7 +4,6 @@
     background-repeat: no-repeat;
     background-position: left calc(42% + 25px) bottom 0px;
     background-size: 606px 202px;
-    // padding-bottom: calc(40% / 5 - 18px);
 
     .cube__inner {
         display: flex;
@@ -57,6 +56,9 @@
 }
 
 .articles {
+    .row{
+        margin-left: 0px;
+    }
     .articles__cards {
         display: flex;
         justify-content: space-between;

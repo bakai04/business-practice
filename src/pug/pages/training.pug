@@ -1,5 +1,16 @@
 extends ../sample.pug
-
+include ../mixins/trainingCard.pug
 block content
-    .container-md
-        p Треннинги
+    include ../data/trainingData.pug
+    .training
+        .container
+            nav.bread-crumbs(aria-label='breadcrumb')
+                ol.breadcrumb
+                    li.breadcrumb-item
+                        a(href='./') Главная  
+                    li.breadcrumb-item.active(aria-current='page') Тренинги
+
+            .training__inner
+                img.bg-pol(src="../../assets/img/Polygon 2.png", alt="")
+                each val in trainings
+                    +trainingCard(val)

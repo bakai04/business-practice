@@ -6,13 +6,20 @@ block content
     include ../data/servicesData
     section#service-page
         .service-page__bg  
-        .container-md
-            include ../includes/breadCrumbs
+        .container
+            nav.bread-crumbs(aria-label='breadcrumb')
+                ol.breadcrumb
+                    li.breadcrumb-item
+                        a(href='./') Главный  
+                    li.breadcrumb-item
+                        a(href='./services.html') Услуги
+                    li.breadcrumb-item.active(aria-current='page') Разрабатываем маркетинг-план: дорожная карта достижения целей
             .service-page__inner
                 img.bg-pol(src="../../assets/img/Polygon 2.png", alt="")
                 h2.services-page__title.col-12 Разрабатываем маркетинг-план: дорожная карта достижения целей
-                each val in servicePlan
-                    +plan(val)
+                ul.col-7
+                    each val in servicePlan
+                        +plan(val)
             .service__description
                 h2.title.col-12 Описание услуги
                 .description__text 
