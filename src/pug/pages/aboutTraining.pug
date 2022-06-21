@@ -14,10 +14,10 @@ block content
                     li.breadcrumb-item.active(aria-current='page') Бизнес-тренинг «Маркетинг – технология роста»
             .about-training__inner
                 img.bg-pol(src="../../assets/img/Polygon 2.png", alt="")
-                h2.services-page__title.col-12 Бизнес-тренинг «Маркетинг – технология роста»
+                h2.about-training__title.col-12 Бизнес-тренинг «Маркетинг – технология роста»
                 p Для кого: руководители компаний, маркетологи, продавцы
                 p Цели бизнес-тренинга:
-                ul.col-7
+                .col-12.col-md-7.about-training__plan
                     each val in plan
                         +plan(val)
                 a(href="./aboutTraining.html")

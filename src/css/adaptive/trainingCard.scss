@@ -1,0 +1,54 @@
+@media(max-width: 992px) {
+    .training__card {
+        flex-direction: column;
+
+        .training__inform {
+            .training__button {
+                margin: 20px 0px;
+            }
+        }
+    }
+}
+@media(max-width: 768px) {
+    .bread-crumbs {
+        display: none;
+    }    
+}
+
+@media(max-width: 576px) {
+    .training__card {
+        padding: 20px 0px;
+        .training__inform {
+            padding: 0 15px;
+            .title {
+                font-size: 25px;
+                margin-bottom: 25px;
+            }
+            p{
+                font-size: 16px;
+                line-height: 18px;
+            }
+        }
+        .card__plans{
+            padding: 0px 15px;
+        }
+    }
+}
+@media(max-width: 400px) {
+    .training__card {
+        .training__inform {
+            .title {
+                font-size: 22px;
+                line-height: 25px;
+                margin-bottom: 25px;
+            }
+            .training__button {
+                padding: 14px 20px 14px 20px;
+                font-size: 15px;
+                svg {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}

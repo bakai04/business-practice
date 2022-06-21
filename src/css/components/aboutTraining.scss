@@ -10,6 +10,20 @@
         margin-top: -3px;
         padding-top: 32px;
 
+        .about-training__plan {
+            margin-top: 25px;
+        }
+
+        .about-training__title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 54px;
+            color: #282C37;
+            margin-bottom: 20px;
+        }
+
         .bg-pol {
             position: absolute;
             left: -25px;
@@ -56,9 +70,23 @@
     .about-training__program {
         margin-top: 162px;
         margin-bottom: 64px;
-        .program__item{
-            margin-top: 45px;
+
+        .program__title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;
+            color: #282C37;
         }
+
+        .program__item {
+            margin-top: 45px;
+            ul{
+                margin-left: 30px;
+            }
+        }
+
         .program__subtitle {
             margin-bottom: 25px;
             font-family: 'Montserrat';
@@ -78,12 +106,6 @@
             line-height: 20px;
             color: #282C37;
             margin-bottom: 20px;
-        }
-
-        ul {
-            margin-top: 25px;
-            list-style-position: outside;
-            margin-left: 42px;
         }
     }
 }

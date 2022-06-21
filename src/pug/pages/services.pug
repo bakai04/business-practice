@@ -16,8 +16,8 @@ block content
                     li.breadcrumb-item.active(aria-current='page') Разрабатываем маркетинг-план: дорожная карта достижения целей
             .service-page__inner
                 img.bg-pol(src="../../assets/img/Polygon 2.png", alt="")
-                h2.services-page__title.col-12 Разрабатываем маркетинг-план: дорожная карта достижения целей
-                ul.col-7
+                h2.services-page__title Разрабатываем маркетинг-план: дорожная карта достижения целей
+                .col-md-7.col-12
                     each val in servicePlan
                         +plan(val)
             .service__description
@@ -26,7 +26,7 @@ block content
                     each val in description 
                         p #{val}
                 .service__stages 
-                    .title Основные этапы разработки маркетинг- 
+                    .title Основные этапы разработки - 
                         a(href="#")  маркетинг плана:
                     ul.stages__item
                         each val in serviceStage
