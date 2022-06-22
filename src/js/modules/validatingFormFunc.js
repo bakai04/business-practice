@@ -62,5 +62,10 @@ export function renderValidation(formInput) {
     errorText = getErrorText(formInput.value);
   });
   warningErrorText.textContent = errorText;
-  if (!errorText) return true;
+  formInput.classList.add("error");
+  if (!errorText)
+  { 
+    formInput.classList.remove("error");
+    return true
+  } 
 }

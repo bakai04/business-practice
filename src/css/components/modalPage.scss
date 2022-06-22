@@ -12,7 +12,10 @@
     padding-top: 115px;
     padding-bottom: 115px;
 }
-
+.error {
+    border: 0px !important;
+    outline: 1px solid #CF4747;
+}
 .modal-page__inner {
     align-items: center;
     background-color: white;
@@ -82,11 +85,6 @@
 .email:focus {
     border: 0px;
     outline: 1px solid #0278ED;
-}
-
-.error {
-    border: 0px;
-    outline: 1px solid #CF4747;
 }
 
 
