@@ -4,7 +4,7 @@ include ../mixins/indexMixins.pug
 block content
     include ../data/indexData
     section#cube
-        .container-md
+        .container
             .cube__inner
                 .cube__inform
                     h2.cube__title Создаем решения
@@ -13,12 +13,12 @@ block content
                     button#open-modal.prime__button Обсудить проблему
                 img.col-5.cube__img(src="../assets/img/cube.png", alt="cube")
     .articles
-        .container-md
+        .container
             .articles__cards.row
                 each val in articles
                     +article(val)
     section#services
-        .container-md
+        .container
             .services__inner
                 h2.services__title услуги
             .services__cards

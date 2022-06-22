@@ -69,9 +69,8 @@
                 }
 
                 .cube__text {
-                    width: 34vw;
-                    margin-top: 5px;
-                    margin-bottom: 32px;
+                    width: auto;
+                    margin: 5px auto 23px auto;
                     font-size: 14px;
                     line-height: 17px;
                 }
@@ -153,30 +152,24 @@
         background-size: 606px 202px;
 
         .cube__inner {
-            background-size: 350px;
-            padding: 11px 0px 70px 0px;
-            background-size: 48.8%;
-            background-position: left 52% top 0px;
+            background: none;
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+            padding: 11px 0px 110px 0px;
 
             .cube__inform {
-                margin-top: -30px;
-
-                .cube__title {
-                    font-size: 26px;
-                    line-height: 34px;
-                }
-
+                padding: 0px;
+                margin-top: 32px;
+                background: none;
                 .cube__subtitle {
                     font-size: 18px;
                     line-height: 22px;
                 }
 
                 .cube__text {
-                    width: 34vw;
-                    margin-top: 5px;
-                    margin-bottom: 14px;
-                    font-size: 14px;
-                    line-height: 17px;
+                    width: auto;
+                    margin: 5px auto 14px auto;
                 }
             }
 
@@ -264,6 +257,7 @@
 
 @media (max-width: 600px) {
     #cube {
+        margin-top: 35px;
         background: url('../../assets/img/icons/arrows.svg');
         background-repeat: no-repeat;
         background-position: left 50% bottom 0px;
@@ -277,18 +271,32 @@
             padding: 11px 0px 110px 0px;
 
             .cube__inform {
-                background: none;
-                padding: 0px;
-                margin-top: 32px;
-
                 .cube__text {
                     width: 300px;
                     margin: 16px auto 24px auto;
+                }
+                .cube__title {
+                    font-size: 26px;
+                    line-height: 34px;
                 }
             }
 
             .cube__img {
                 width: 231px;
+            }
+        }
+    }
+    .articles {
+        margin-top: 57px;
+        .articles__cards {
+            .articles__item {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-right: 30px;
+                .article-text {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
             }
         }
     }

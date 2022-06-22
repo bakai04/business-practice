@@ -12,18 +12,17 @@ function resetConsultationForm(){
 }
 
 
-function submittingConsultationData(
-  inputNameValue,
-  inputEmailValue,
-) {
+function submittingConsultationData() {
+  const nameInput = document.querySelector(".name");
+  const emailInput = document.querySelector(".email");
   const sendFormDataBtn = document.querySelector(".consulting-form__btn");
   const successfullyText = document.querySelector(".successfully");
   sendFormDataBtn.textContent = "идет отправка...";
   sendFormDataBtn.disabled = true;
   setTimeout(() => {
     console.log({
-      name: inputNameValue,
-      email: inputEmailValue,
+      name: nameInput.value,
+      email: emailInput.value,
     });
     sendFormDataBtn.disabled = false;
     successfullyText.classList.remove("d-none");
@@ -49,8 +48,8 @@ function consultationForm() {
     emailInput.addEventListener("input", () => {
       renderValidation(emailInput);
     });
-    if (inputNameValue !== undefined && inputEmailValue !== undefined) {
-      submittingConsultationData(inputNameValue, inputEmailValue);
+    if (inputNameValue === true && inputEmailValue === true) {
+      submittingConsultationData();
     }
   });
 }
