@@ -1,0 +1,23 @@
+.bread-crumbs {
+    .bread-crumb {
+        margin-bottom: 0px !important;
+    }
+
+    ol {
+        margin: 0px;
+    }
+
+    .breadcrumb-item {
+        a {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #9FA7B0;
+        }
+    }
+    .active {
+        color: #282C37;
+    }
+}

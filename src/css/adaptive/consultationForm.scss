@@ -1,0 +1,28 @@
+@media(max-width: 768px){
+    .consultation {
+        .small{
+            display: none;
+        }
+        .midlle{
+            display: none;
+        }
+        .big{
+            display: none;
+        }
+        #consultation-form {
+            padding: 78px 56px;
+            width: 100%;
+        }
+    }
+}
+@media(max-width: 576px){
+    .consultation {
+        #consultation-form {
+            padding: 50px 40px;
+            width: 100%;
+            .consulting-form__btn{
+                font-size: 14px;
+            }
+        }
+    }
+}

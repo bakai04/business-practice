@@ -1,0 +1,44 @@
+extends ../sample.pug
+include ../mixins/indexMixins.pug
+
+block content
+    include ../data/indexData
+    section#cube
+        .container
+            .cube__inner
+                .cube__inform
+                    h2.cube__title Создаем решения
+                    h3.cube__subtitle Для роста бизнеса
+                    p.cube__text На основе анализа данных с алгоритмами реализации
+                    button#open-modal.prime__button Обсудить проблему
+                img.col-5.cube__img(src="../assets/img/cube.png", alt="cube")
+    .articles
+        .container
+            .articles__cards.row
+                each val in articles
+                    +article(val)
+    section#services
+        .container
+            .services__inner
+                h2.services__title услуги
+            .services__cards
+                each val in services
+                    +service(val)
+   
+    section.modal-page.d-none
+        .modal-page__inner
+            img.modal-page__close(src='../../assets/img/icons/close.svg', alt='close')
+            .modal-page__item
+                form#form.modal-page__form(onsubmit='return false;')
+                    h2.modal-page__title Оставьте заявку
+                    div
+                        input.name(type='text', placeholder='Ваше имя', name='name')
+                        p.warning-name-error 
+                    div
+                        input.email(type='email', placeholder='Email', name='email')
+                        p.warning-email-error 
+                    .textArea-input
+                        textarea.big-text(type='text', placeholder='Пожалуйста опишите вашу проблему', name='textarea')
+                        p.warning-textarea-error 
+                    input.prime__button.form__button-submit(type='submit' name="textarea" value="отправить")
+                    p.successfully.d-none Ваша заявка успешно отправлена!

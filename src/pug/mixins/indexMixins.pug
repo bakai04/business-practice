@@ -1,0 +1,16 @@
+mixin service(val)
+    a.services__item( class= val.class href= val.link)
+        .services__inform.col-8
+            img(src= val.icon, alt="icon")
+            p "#{val.title}"
+
+
+
+mixin article(val)
+    .articles__item.col-12.col-sm-6
+        .articles__inform.col-12.col-lg-8
+            .col-3
+                img.article-logo(src="../../assets/img/icons/logo2.svg", alt="logo")
+            .col-9
+                a(href= val.link).article-text= val.title 
+

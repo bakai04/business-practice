@@ -1,0 +1,111 @@
+#about-training {
+    margin-top: 66px;
+    margin-bottom: 53px;
+    background: url("../../assets/img/bg-poligons.png");
+    background-repeat: no-repeat;
+    background-position: right -200px top 0px;
+
+    .about-training__inner {
+        position: relative;
+        margin-top: -3px;
+        padding-top: 32px;
+
+        .about-training__plan {
+            margin-top: 25px;
+        }
+
+        .about-training__title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 54px;
+            color: #282C37;
+            margin-bottom: 20px;
+        }
+
+        .bg-pol {
+            position: absolute;
+            left: -25px;
+            top: 0px;
+            z-index: -1;
+        }
+
+        p {
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #282C37;
+            margin-bottom: 5px;
+        }
+
+        .about-training__button {
+            margin-top: 59px;
+            padding: 14px 25px 14px 88px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: uppercase;
+            background: #47CF34;
+            border-radius: 8px;
+            border: 0px;
+            color: #FFFFFF;
+            transition: 0.2s;
+
+            svg {
+                margin-left: 43px;
+            }
+
+            &:hover {
+                background: #30B01E;
+                ;
+            }
+        }
+    }
+
+    .about-training__program {
+        margin-top: 162px;
+        margin-bottom: 64px;
+
+        .program__title {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;
+            color: #282C37;
+        }
+
+        .program__item {
+            margin-top: 45px;
+            ul{
+                margin-left: 30px;
+            }
+        }
+
+        .program__subtitle {
+            margin-bottom: 25px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #282C37;
+        }
+
+        p {
+            margin-left: 42px;
+            font-family: 'Lato';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 20px;
+            color: #282C37;
+            margin-bottom: 20px;
+        }
+    }
+}

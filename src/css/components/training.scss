@@ -1,0 +1,23 @@
+.training{
+    margin-top: 66px;
+    background: url("../../assets/img/bg-poligons.png");
+    background-repeat: no-repeat;
+    background-position: right -200px top 0px;
+    margin-bottom: 98px;
+    .training__inner{
+        position: relative;
+        padding-top: 39px;
+        margin-top: -3px;
+        .bg-pol {
+            position: absolute;
+            left: -25px;
+            top: 0px;
+            z-index: -2;
+        }
+    }
+}
+@media(max-width: 568px){
+    .training{
+        background: none;
+    }
+}

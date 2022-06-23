@@ -2,10 +2,16 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    a{
+        text-decoration: none;
+    }
+    p{
+        margin: 0px;
+    }
 }
 
 .prime__button {
-    padding: 14px 32px 14px 32px;
+    padding: 14px 31px 14px 32px;
     background: #47CF34;
     border: 1px solid #47CF34;
     border-radius: 8px;
@@ -17,4 +23,8 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    transition: 0.2s;
+    &:hover{
+        background: #30B01E;
+    }
 }

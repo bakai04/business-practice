@@ -1,9 +1,14 @@
 const path = require("path");
+const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+
+const PAGES_DIR = `${path.resolve(__dirname, "src")}/pug/pages/`;
+const PAGES = fs
+  .readdirSync(PAGES_DIR)
+  .filter((fileName) => fileName.endsWith(".pug"));
 
 module.exports = {
   mode: "development",
@@ -12,37 +17,36 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
-  optimization: {
-    minimizer: [
-      new ImageMinimizerPlugin({
-        minimizer: {
-          implementation: ImageMinimizerPlugin.imageminMinify,
-          options: {
-            plugins: [
-              ["imagemin-pngquant", { optimizationLevel: 6 }],
-            ],
-          },
-        },
-    }),
-    ],
-  },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, "dist"),
     },
     watchFiles: {
-      paths: ['./src/html/index.pug'], 
-        options: {
-          usePolling: true,
-        },
+      paths: [
+        "./src/pug/sample.pug",
+        "./src/pug/pages/index.pug",
+        "./src/pug/pages/aboutTraining.pug",
+        "./src/pug/mixins/indexMixins.pug",
+        "./src/pug/mixins/plan.pug",
+        "./src/pug/mixins/stages.pug",
+        "./src/pug/mixins/trainingCard.pug",
+        "./src/pug/includes/consultationForm.pug",
+        "./src/pug/includes/footer.pug",
+        "./src/pug/includes/header.pug",
+        "./src/pug/pages/services.pug",
+        "./src/pug/data/indexData.pug",
+        "./src/pug/data/servicesData.pug",
+        "./src/pug/data/trainingData.pug",
+        "./src/pug/data/aboutTrainingData.pug",
+        "./src/pug/pages/training.pug",
+      ],
+      options: {
+        usePolling: true,
+      },
     },
     port: 4000,
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, './src/html/index.pug'),
-      filename: 'index.html',
-    }),
     new CopyPlugin({
       patterns: [{ from: "./src/assets", to: "./assets" }],
     }),
@@ -50,6 +54,13 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "style.css",
     }),
+    ...PAGES.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          template: `${PAGES_DIR}/${page}`,
+          filename: `./${page.replace(/\.pug/, ".html")}`,
+        })
+    ),
   ],
 
   module: {
@@ -60,11 +71,21 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        loader: '@webdiscus/pug-loader',
+        loader: "@webdiscus/pug-loader",
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader,"css-loader", "sass-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "resolve-url-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
       },
     ],
   },
