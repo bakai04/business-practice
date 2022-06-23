@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Document</title>
     <style></style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +22,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <script defer src="bundle.js"></script>
+    <script defer="defer" src="bundle.js"></script>
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
@@ -93,7 +93,7 @@
             <div class="container">
               <img
                 class="mobail-menu__close"
-                src="../../assets/img/icons/close.svg"
+                src="./assets/img/icons/close.svg"
               />
               <div class="mobail-menu__inner">
                 <img
@@ -170,7 +170,7 @@
           </ol>
         </nav>
         <div class="about-training__inner">
-          <img class="bg-pol" src="../../assets/img/Polygon 2.png" alt="bg" />
+          <img class="bg-pol" src="./assets/img/Polygon 2.png" alt="bg" />
           <h2 class="about-training__title col-12">
             Бизнес-тренинг «Маркетинг – технология роста»
           </h2>
@@ -389,21 +389,16 @@
         <div class="col-12 consultation">
           <img
             class="small"
-            src="../../assets/img/Polygon 2.png"
+            src="./assets/img/Polygon 2.png"
             alt="icon"
           /><img
             class="midlle"
-            src="../../assets/img/Polygon 2.png"
+            src="./assets/img/Polygon 2.png"
             alt="icon"
-          /><img class="big" src="../../assets/img/Polygon 2.png" alt="icon" />
+          /><img class="big" src="./assets/img/Polygon 2.png" alt="icon" />
           <form id="consultation-form" onsubmit="return false;">
             <div>
-              <input
-                class="name"
-                type="text"
-                placeholder="Ваше имя"
-                name="name"
-              />
+              <input class="name" placeholder="Ваше имя" name="name" />
               <p class="warning-name-error"></p>
             </div>
             <div>

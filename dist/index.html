@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Document</title>
     <style></style>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +22,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <script defer src="bundle.js"></script>
+    <script defer="defer" src="bundle.js"></script>
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
@@ -93,7 +93,7 @@
             <div class="container">
               <img
                 class="mobail-menu__close"
-                src="../../assets/img/icons/close.svg"
+                src="./assets/img/icons/close.svg"
               />
               <div class="mobail-menu__inner">
                 <img
@@ -185,7 +185,7 @@
               <div class="col-3">
                 <img
                   class="article-logo"
-                  src="../../assets/img/icons/logo2.svg"
+                  src="./assets/img/icons/logo2.svg"
                   alt="logo"
                 />
               </div>
@@ -201,7 +201,7 @@
               <div class="col-3">
                 <img
                   class="article-logo"
-                  src="../../assets/img/icons/logo2.svg"
+                  src="./assets/img/icons/logo2.svg"
                   alt="logo"
                 />
               </div>
@@ -217,7 +217,7 @@
               <div class="col-3">
                 <img
                   class="article-logo"
-                  src="../../assets/img/icons/logo2.svg"
+                  src="./assets/img/icons/logo2.svg"
                   alt="logo"
                 />
               </div>
@@ -233,7 +233,7 @@
               <div class="col-3">
                 <img
                   class="article-logo"
-                  src="../../assets/img/icons/logo2.svg"
+                  src="./assets/img/icons/logo2.svg"
                   alt="logo"
                 />
               </div>
@@ -256,26 +256,26 @@
         <div class="services__cards">
           <a class="services__item plan" href="./services.html"
             ><div class="services__inform col-8">
-              <img src="../../assets/img/icons/plan.svg" alt="icon" />
+              <img src="./assets/img/icons/plan.svg" alt="icon" />
               <p>
                 "Разрабатываем маркетинг-план: дорожная карта достижения целей"
               </p>
             </div></a
           ><a class="services__item lamp" href="./services.html"
             ><div class="services__inform col-8">
-              <img src="../../assets/img/icons/lamp.svg" alt="icon" />
+              <img src="./assets/img/icons/lamp.svg" alt="icon" />
               <p>
                 "Повышаем эффективность продвижения: аудит существующей модели"
               </p>
             </div></a
           ><a class="services__item search" href="./services.html"
             ><div class="services__inform col-8">
-              <img src="../../assets/img/icons/search.svg" alt="icon" />
+              <img src="./assets/img/icons/search.svg" alt="icon" />
               <p>"Находим скрытую прибыль: анализ модели ценообразования"</p>
             </div></a
           ><a class="services__item rocket" href="./services.html"
             ><div class="services__inform col-8">
-              <img src="../../assets/img/icons/startup.svg" alt="icon" />
+              <img src="./assets/img/icons/startup.svg" alt="icon" />
               <p>"Запускаем новый проект: start-up маркетинг"</p>
             </div></a
           >
@@ -286,19 +286,14 @@
       <div class="modal-page__inner">
         <img
           class="modal-page__close"
-          src="../../assets/img/icons/close.svg"
+          src="./assets/img/icons/close.svg"
           alt="close"
         />
         <div class="modal-page__item">
           <form class="modal-page__form" id="form" onsubmit="return false;">
             <h2 class="modal-page__title">Оставьте заявку</h2>
             <div>
-              <input
-                class="name"
-                type="text"
-                placeholder="Ваше имя"
-                name="name"
-              />
+              <input class="name" placeholder="Ваше имя" name="name" />
               <p class="warning-name-error"></p>
             </div>
             <div>
