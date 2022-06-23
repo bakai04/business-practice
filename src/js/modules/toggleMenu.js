@@ -4,6 +4,7 @@ function toggleMenu(){
 
     burgerBtn.classList.toggle("active");
     menu.classList.toggle("mobail-menu--active");
+    document.querySelector("body").classList.toggle("overflow-hidden");
 }
 function openMenu() {
     const burgerBtn=document.querySelector('.burger');
