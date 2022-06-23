@@ -37,7 +37,7 @@ function consultationForm() {
   const emailInput = document.querySelector(".email");
   const sendFormDataBtn = document.querySelector(".consulting-form__btn");
 
-  sendFormDataBtn.addEventListener("click", () => {
+  sendFormDataBtn?.addEventListener("click", () => {
     let inputNameValue = renderValidation(nameInput);
     let inputEmailValue = renderValidation(emailInput);
 

@@ -10,7 +10,7 @@ function toggleModalPage() {
     openBtn?.addEventListener("click", toggleForm)
     closeBtn?.addEventListener("click", toggleForm)
 
-    modalPage.addEventListener("click", (e)=>{
+    modalPage?.addEventListener("click", (e)=>{
       if(e.path.indexOf(modalPageInner)===-1){
         toggleForm();
       }
