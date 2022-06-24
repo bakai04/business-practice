@@ -59,6 +59,7 @@ module.exports = {
         new HtmlWebpackPlugin({
           template: `${PAGES_DIR}/${page}`,
           filename: `./${page.replace(/\.pug/, ".html")}`,
+          minify: false,
         })
     ),
   ],
