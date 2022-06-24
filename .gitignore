@@ -1,2 +1,8 @@
 /node_modules
-/dist
+src/css
+src/assets
+src/html
+src/js
+public
+/package-lock.json
+/package.json
